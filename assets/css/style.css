@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #faf9fa; /* Primary color */
+    --secondary-color: #ffffff; /* Secondary color */
+    --heading-color: #829cef; /* Heading color */
+    --paragraph-color: #333; /* Paragraph color */
+    --link-color: #00bcd4; /* Link color */
+    --font-size: 15px; /* Font size for paragraphs */
+    --box-shadow: 4px 4px 8px rgba(0,0,0,0.01); /* Box shadow */
+  }
+  body{
+    font-family: Poppins;
+  }
+a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+#testimonial{
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* --------------------> heading style design <---------------------------- */
+
+.heading{
+  color: var(--heading-color);
+  margin-bottom: 50px;
+  text-transform:capitalize;
+  position: relative;
+}
+.heading::before{
+  content: '';
+  width: 80%;
+  height: 4px;
+  background-color: var(--heading-color);
+  position: absolute;
+  bottom: -10px ;
+  left: 10%;
+}
+
+/* --------------------> slider container design <---------------------------- */
+
+.slider-container {
+    width: 600px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(130, 156, 239, 0.3);
+    border-radius: 8px;
+    position: relative;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* --------------------> slider item design <---------------------------- */
+
+  .slider_item{
+    background: url('../images/quotes.png');
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: 90% 10%;
+    flex: 0 0 100%;
+    width:auto;
+    height:auto;
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* --------------------> slider item top section design <---------------------------- */
+
+  .slider_item .user_details{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .slider_item .user_details .user_avatar{
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+  }
+  .slider_item .user_details .user_avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(70%);
+  }
+  .slider_item .user_details .user_info h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    text-align: start;
+  }
+  .slider_item .user_details .user_info p{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    text-align: start;
+  }
+
+  /* -----------------------> slider item paragrap desing <------------------------------- */
+
+  .slider_item .con{
+    line-height: 25px;
+    font-size: 14px;
+    margin: 20px 0;
+    color: var(--paragraph-color);
+    padding: 0 40px;
+  }
+
+  /* --------------------> slider item footer design <---------------------------- */
+
+.user_social ul li{
+  display: inline-block;
+}
+.user_social ul li a i{
+  display: block;
+  margin: 0px 5px;
+  color: var(--heading-color);
+  width: 35px;
+  height: 35px;
+  border: 0.1rem solid var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* --------------------> slider item nex previous button  design <---------------------------- */
+
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--heading-color);
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(130, 156, 239, 0.3);
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+
+ /* ----------------------------->Mobile Devices (Landscape) <-------------------------- */
+ @media only screen and (max-width: 650px) {
+  .slider-container{
+    width: 90%;
+  }
+ }
+ 
+ /*--------------------------->  Mobile Devices (Portrait) <------------------------------------ */
+ @media only screen and (max-width: 480px) {
+  .slider-container{
+    width: 95%;
+  }
+   .slider_item{
+    padding: 20px 15px;
+   }
+ }
